@@ -1,0 +1,1298 @@
+[
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "spark-4.0Ultra",
+      "glm-4-plus"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 2,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 2,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "spark-4.0Ultra",
+      "glm-4-plus"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 2,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 2,
+    "support": [
+      "spark-4.0Ultra",
+      "glm-4-plus"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 3,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 3,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 3,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 3,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 5,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 5,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 5,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 5,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 6,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 6,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 6,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 6,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 12,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 12,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 12,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 12,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 14,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 14,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 14,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 14,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 15,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 15,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 15,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 15,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 16,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 16,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 16,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 16,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 17,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 17,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 17,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 17,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 18,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 18,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 18,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "100",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 18,
+    "support": [
+      "glm-4-plus",
+      "spark-4.0Ultra"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  }
+]
