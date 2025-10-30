@@ -148,11 +148,18 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
         comp = m.get('company') or 'Unknown'
         by_company[comp].append(m)
 
-    for comp, items in by_company.items():
+    para_bbox_map = {
+        (p.get("page_id"), p.get("para_id")): p.get("bbox")
+        for p in all_paragraphs
+        if p.get("page_id") is not None and p.get("para_id") is not None
+    }
+  
+   for comp, items in by_company.items():
         metric_map = aggregate_merged_for_company(items)
         # transform into desired JSON shape: metric -> {value, unit, year, type, confidence, source}
         final_map = {}
         for metric, item in metric_map.items():
+            bbox = para_bbox_map.get((item.get("page_id"), item.get("para_id")))
             final_map[metric] = {
                 'value': item.get('value',''),
                 'unit': item.get('unit',''),
@@ -161,6 +168,7 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
                 'confidence': item.get('confidence',''),
                 'page_id': item.get('page_id'),
                 'para_id': item.get('para_id'),
+                'bbox': bbox, 
                 'support': item.get('support',[]),
                 'notes': item.get('notes',[])
             }
