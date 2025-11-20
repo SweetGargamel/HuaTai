@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "E:\CodePlace\HuaTai\jobs.py", line 130, in _process_job
+    final = run_pipeline(
+        pdf_files=[str(pdf_path)],
+    ...<4 lines>...
+        max_workers=cfg.MAX_WORKERS,
+    )
+  File "E:\CodePlace\HuaTai\main.py", line 126, in run_pipeline
+    res = llm_extractor.extract_metrics(paras, metrics, workers=max_workers)
+  File "E:\CodePlace\HuaTai\tools\extractor.py", line 146, in extract_metrics
+    raise RuntimeError("No LLM extractor configured. Provide API keys in config.py or enable mock mode.")
+RuntimeError: No LLM extractor configured. Provide API keys in config.py or enable mock mode.

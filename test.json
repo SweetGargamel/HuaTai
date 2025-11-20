@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "data": {
+    "reportId": "uuid-a1b2c3d4-e5f6-7890",
+    "status": "COMPLETED",
+    "message": "解析PDF文档成功",
+    "keywords": {
+      "债券面值": {
+        "value": "1500.00",
+        "value_lastyear": "123456",
+        "value_before2year": "123456",
+        "YoY": "21.57%", //同比增长
+        "YoY_D":"-10345", //同比增长额
+        "unit": "百万元",
+        "year": "2022", //预留提取年份，可能不一定会提取
+        "type": "actual",
+        "confidence": 100, //改为使用百分数
+        "page_id": 1,
+        "para_id": 2
+        // "support": ["glm-4-plus", "spark-4.0Ultra"], //
+        // "notes": ["..."] // 这两个字段可能想删掉
+      }
+    }
+  }
+}

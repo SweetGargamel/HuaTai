@@ -153,8 +153,8 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
         for p in all_paragraphs
         if p.get("page_id") is not None and p.get("para_id") is not None
     }
-  
-   for comp, items in by_company.items():
+
+    for comp, items in by_company.items():
         metric_map = aggregate_merged_for_company(items)
         # transform into desired JSON shape: metric -> {value, unit, year, type, confidence, source}
         final_map = {}

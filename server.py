@@ -1,38 +1,109 @@
-from flask import Flask, send_from_directory, jsonify, request
-import subprocess
-import os
+from __future__ import annotations
 
-app = Flask(__name__, static_folder='frontend/dist', static_url_path='')
+import json
+from pathlib import Path
+from typing import Dict, Any
+from uuid import uuid4
 
-# 路由：主页（前端）
-@app.route('/')
-def index():
-    return send_from_directory(app.static_folder, 'index.html')
+from flask import Flask, jsonify, request
+from werkzeug.utils import secure_filename
 
-# 路由：API - 调用 main.py 进行指标抽取
-@app.route('/api/extract', methods=['POST'])
-def extract():
-    pdf_path = request.json.get("pdf_path")
-    output_dir = "./output"
-    if not pdf_path or not os.path.exists(pdf_path):
-        return jsonify({"error": "PDF not found"}), 400
-    subprocess.run(["python", "main.py", "--pdf", pdf_path, "--output_dir", output_dir])
-    return jsonify({"status": "ok", "result": os.path.join(output_dir, "final.json")})
+from jobs import JobStore, ReportProcessor
 
-# 路由：返回最新抽取结果
-@app.route('/api/result')
-def get_result():
-    try:
-        with open("./output/final.json", "r", encoding="utf-8") as f:
-            data = f.read()
-        return data
-    except Exception:
-        return jsonify({"error": "No result yet"}), 404
+app = Flask(__name__)
 
-# 静态文件（前端打包后）
-@app.route('/<path:path>')
-def static_proxy(path):
-    return send_from_directory(app.static_folder, path)
+UPLOAD_DIR = Path('uploads')
+OUTPUT_DIR = Path('output')
+DB_PATH = OUTPUT_DIR / 'report_jobs.db'
+
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+job_store = JobStore(DB_PATH)
+processor = ReportProcessor(job_store, uploads_dir=UPLOAD_DIR, output_dir=OUTPUT_DIR)
+
+
+def _build_job_payload(job: Dict[str, Any], keywords: Any) -> Dict[str, Any]:
+    return {
+        'success': True,
+        'data': {
+            'reportId': job['report_id'],
+            'fileName': job['file_name'],
+            'status': job['status'],
+            'message': job.get('message', ''),
+            'uploadedAt': job.get('created_at'),
+            'updatedAt': job.get('updated_at'),
+            'keywords': keywords,
+        }
+    }
+
+
+@app.route('/api/v1/reports', methods=['POST'])
+def create_report():
+    if 'file' not in request.files:
+        return jsonify({'success': False, 'message': '缺少文件字段'}), 400
+
+    upload_file = request.files['file']
+    if upload_file.filename == '':
+        return jsonify({'success': False, 'message': '文件名不能为空'}), 400
+
+    display_name = request.form.get('fileName') or upload_file.filename
+    safe_name = secure_filename(display_name) or 'report.pdf'
+    report_id = str(uuid4())
+    report_folder = UPLOAD_DIR / report_id
+    report_folder.mkdir(parents=True, exist_ok=True)
+    pdf_path = report_folder / safe_name
+    upload_file.save(pdf_path)
+
+    job = job_store.create(file_name=display_name, file_path=pdf_path, report_id=report_id)
+    processor.submit(report_id)
+
+    response = {
+        'success': True,
+        'message': '文件上传成功，正在处理中...',
+        'data': {
+            'reportId': job['report_id'],
+            'fileName': job['file_name'],
+            'status': job['status'],
+            'uploadedAt': job['created_at'],
+        }
+    }
+    return jsonify(response), 201
+
+
+@app.route('/api/v1/reports/<report_id>', methods=['GET'])
+def get_report(report_id: str):
+    job = job_store.fetch(report_id)
+    if not job:
+        return jsonify({'success': False, 'message': '报告不存在'}), 404
+
+    status = job['status']
+    keywords: Any = [] if status != 'COMPLETED' else {}
+
+    if status == 'COMPLETED' and job.get('result_path'):
+        payload_path = Path(job['result_path'])
+        if payload_path.exists():
+            try:
+                payload = json.loads(payload_path.read_text(encoding='utf-8'))
+                keywords = payload.get('data', {}).get('keywords', {})
+            except Exception:
+                keywords = {}
+        else:
+            keywords = {}
+    elif status == 'FAILED':
+        keywords = []
+    else:
+        keywords = []
+
+    payload = _build_job_payload(job, keywords)
+    if status == 'PROCESSING':
+        payload['data']['message'] = job.get('message') or '文件正在处理中'
+    elif status == 'FAILED':
+        payload['data']['message'] = job.get('message') or '无法解析此 PDF 文档。'
+
+    return jsonify(payload)
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=False)

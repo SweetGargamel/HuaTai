@@ -28,6 +28,7 @@ Dependencies (pip):
 
 Tesseract: must have tesseract installed on the system and in PATH.
 For Chinese OCR use language packs (e.g. chi_sim). Configure `ocr_lang` if needed.
+"""
 
 # === enhanced parser.py ===
 from __future__ import annotations

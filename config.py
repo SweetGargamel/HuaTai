@@ -22,6 +22,13 @@ METRICS = [
     "利率",
 ]
 
+# --- LLM credentials ---
+# Fill in the API keys you received from each provider. These values are used
+# unless you explicitly enable mock mode.
+ZHIPU_API_KEY = ""
+SPARK_API_KEY = ""
+SPARK_ENDPOINT = "https://spark-api-open.xf-yun.com/v2/chat/completions"
+
 # Where to write intermediate and final outputs
 OUTPUT_DIR = "./output"
 PARSED_JSON = "{output_dir}/parsed.json"
@@ -35,7 +42,8 @@ PDF_FILES = [
 
 ]  # e.g. ["/path/to/report1.pdf", "/path/to/report2.pdf"]
 
-# Whether to run extractor in mock mode (no API keys required)
+# Whether to run extractor in mock mode (no API keys required). When False,
+# the backend will attempt to call the real APIs and raise if keys are missing.
 MOCK_EXTRACTOR = False
 
 # Other settings

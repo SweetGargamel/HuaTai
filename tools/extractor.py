@@ -24,17 +24,23 @@ try:
 except Exception:
     ZhipuAiClient = None
 
+import config as cfg
+
 # ---------- 配置 ----------
 MAX_PROMPT_CHARS = 3500
 DEFAULT_TEMPERATURE = 0.0
 CONCURRENCY = 6
 REQUEST_TIMEOUT = 30
 
-ZHIPU_API_KEY = os.getenv("ZHIPU_API_KEY","64f170d742a64de681b5c978d2f896ca.LykJN8uymnwNA0o6")
-SPARK_API_KEY = os.getenv("SPARK_API_KEY","jUKnJwaWgcKBuPzbJQOc:lKHUGblYvqXXIdryjDjv")
-SPARK_ENDPOINT = os.getenv("SPARK_ENDPOINT", "https://spark-api-open.xf-yun.com/v2/chat/completions")
+ZHIPU_API_KEY = cfg.ZHIPU_API_KEY
+SPARK_API_KEY = cfg.SPARK_API_KEY
+SPARK_ENDPOINT = cfg.SPARK_ENDPOINT
 
-MOCK_MODE = os.getenv("EXTRACTOR_MOCK", "0") 
+_mock_flag = os.getenv("EXTRACTOR_MOCK")
+if _mock_flag is None:
+    MOCK_MODE = bool(cfg.MOCK_EXTRACTOR)
+else:
+    MOCK_MODE = _mock_flag == "1"
 
 # ---------- 工具函数 ----------
 
@@ -136,6 +142,8 @@ def extract_metrics(paragraphs: List[Dict[str,Any]], metrics: List[str], workers
             clients.append(ZhipuClient(ZHIPU_API_KEY))
         if SPARK_API_KEY:
             clients.append(SparkClient(SPARK_API_KEY))
+        if not clients:
+            raise RuntimeError("No LLM extractor configured. Provide API keys in config.py or enable mock mode.")
     results = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = []
