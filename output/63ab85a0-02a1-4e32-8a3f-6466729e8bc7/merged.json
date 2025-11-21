@@ -1,0 +1,938 @@
+[
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 2,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 2,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 2,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 2,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 3,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 3,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 3,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 3,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 4,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 4,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 4,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 4,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 5,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 5,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 5,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 5,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 6,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 6,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 6,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 6,
+    "support": [
+      "deepseek-v3.2-exp",
+      "qwen3-max"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 8,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 9,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 2,
+    "para_id": 11,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 12,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 12,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 12,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 3,
+    "para_id": 12,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "营收",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 4,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利润",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 4,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "债券面值",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 4,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利率",
+    "value": "",
+    "unit": "",
+    "year": "",
+    "type": "",
+    "confidence": "high",
+    "page_id": 4,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  }
+]

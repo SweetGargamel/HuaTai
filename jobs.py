@@ -15,8 +15,6 @@ from uuid import uuid4
 import config as cfg
 from main import run_pipeline
 
-CONFIDENCE_MAP = {"high": 100, "medium": 70, "low": 40}
-
 
 def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -134,6 +132,7 @@ class ReportProcessor:
                 output_dir=str(run_dir),
                 mock_extractor=cfg.MOCK_EXTRACTOR,
                 max_workers=cfg.MAX_WORKERS,
+                auto_extract=True  # 使用新的自动提取模式
             )
             keywords = build_keywords_payload(final)
             payload_path = run_dir / "keywords.json"
@@ -161,12 +160,28 @@ class ReportProcessor:
 
 
 def build_keywords_payload(final_result: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
-    """Transform final aggregated result into the API keywords shape."""
+    """
+    Transform final aggregated result into the API keywords shape.
+    
+    支持动态字段，包括衍生指标：
+    - value_lastyear: 去年同期值
+    - value_before2year: 前年同期值
+    - YoY: 同比增长率
+    - YoY_D: 同比增长额
+    """
 
     keywords: Dict[str, Any] = {}
     for company, metrics in (final_result or {}).items():
         for metric_name, metric_data in (metrics or {}).items():
-            confidence = metric_data.get("confidence") or "medium"
+            # confidence已经是百分制（0-100）
+            confidence = metric_data.get("confidence")
+            if isinstance(confidence, str):
+                # 如果仍是文本格式，转换为百分制
+                CONFIDENCE_MAP = {"high": 100, "medium": 70, "low": 40}
+                confidence = CONFIDENCE_MAP.get(confidence, 50)
+            elif not isinstance(confidence, int):
+                confidence = 50
+            
             keywords[metric_name] = {
                 "value": metric_data.get("value", ""),
                 "value_lastyear": metric_data.get("value_lastyear", ""),
@@ -176,10 +191,9 @@ def build_keywords_payload(final_result: Dict[str, Dict[str, Any]]) -> Dict[str,
                 "unit": metric_data.get("unit", ""),
                 "year": metric_data.get("year", ""),
                 "type": metric_data.get("type", ""),
-                "confidence": CONFIDENCE_MAP.get(confidence, 50),
+                "confidence": confidence,
                 "page_id": metric_data.get("page_id"),
                 "para_id": metric_data.get("para_id"),
                 "bbox": metric_data.get("bbox"),
-                "company": company,
             }
     return keywords

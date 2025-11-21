@@ -46,36 +46,127 @@
 # # 多模型结果融合与可信度分类
 
 
-# 这里需要你进行这样的操作
 """
-我现在想要做一个合并的函数，我现在在用大模型去提取某个财报里面的数据 ，
-然后不同的大模型会返回数据。我希望能够合并不同大模型的结果。
-我能怎么写，请你用python帮我写这个代码.
+多模型结果融合与可信度分类
+
+支持动态字段识别和衍生指标（value_lastyear, YoY等）的合并
 """
 
 from collections import defaultdict, Counter
+from typing import Dict, Any, List, Tuple
+import re
+import json_repair
+import config as cfg
 
-def merge_results(results):
+# 尝试导入 LLM 客户端
+try:
+    from tools.extractor import ZhipuClient, SparkClient, QwenClient, DeepSeekClient, MockClient
+except ImportError:
+    try:
+        from extractor import ZhipuClient, SparkClient, QwenClient, DeepSeekClient, MockClient
+    except ImportError:
+        pass
+
+# 导入置信度计算模块
+try:
+    from tools.confidence import calculate_confidence
+except ImportError:
+    try:
+        from confidence import calculate_confidence
+    except ImportError:
+        # 降级方案：使用简单映射
+        def calculate_confidence(item: Dict[str, Any]) -> int:
+            confidence_map = {"high": 100, "medium": 70, "low": 40}
+            return confidence_map.get(item.get("confidence", "medium"), 50)
+
+def clean_numeric_value(val: str) -> str:
+    """
+    清洗数值，移除非数字字符（保留小数点和负号）
+    """
+    if not val:
+        return ""
+    # 移除千分位逗号
+    val = val.replace(',', '')
+    # 提取数字部分 (支持负数和小数)
+    match = re.search(r'-?\d+\.?\d*', val)
+    if match:
+        return match.group(0)
+    return val
+
+def semantic_merge_metrics(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    使用 AI 对指标进行语义合并（去除重复/同义指标）
+    """
+    # 1. 收集所有指标名称
+    metrics = list(set(r['metric'] for r in results if r.get('metric')))
+    if not metrics:
+        return results
+
+    # 2. 初始化 LLM 客户端
+    client = None
+    if cfg.MOCK_EXTRACTOR:
+         client = MockClient("mock")
+    elif cfg.ZHIPU_API_KEY:
+        client = ZhipuClient(cfg.ZHIPU_API_KEY)
+    elif cfg.DASHSCOPE_API_KEY:
+        client = QwenClient(cfg.DASHSCOPE_API_KEY, cfg.DASHSCOPE_BASE_URL)
+    
+    if not client:
+        print("Warning: No LLM client available for semantic merge, skipping.")
+        return results
+
+    # 3. 构建提示词
+    prompt = (
+        "请分析以下财务指标名称列表，找出含义相同或包含关系的指标，并将它们合并为标准名称。\n"
+        "原则：\n"
+        "1. 优先保留更简洁、通用的名称（如'营业收入'优于'营业收入（合并口径）'）\n"
+        "2. 去除括号内的补充说明，除非那是区分不同指标的关键（如'期初'和'期末'通常需要区分，除非你能确定它们是重复的）。\n"
+        "3. 重点合并：'XX余额' 与 'XX余额（报告期末）' 通常是同一个指标，请合并为 'XX余额'。\n"
+        "4. '非合并口径' 与 '合并口径' 如果数值一致或者是默认口径，可以合并为通用名称。\n"
+        "5. 返回一个 JSON 映射对象，格式为 {\"原指标名\": \"标准指标名\"}。\n"
+        "6. 未提及的指标将保持原样。\n\n"
+        f"指标列表：{json_repair.dumps(metrics, ensure_ascii=False)}\n\n"
+        "仅返回 JSON。"
+    )
+
+    # 4. 调用 LLM
+    try:
+        print("Running semantic merge on metrics...")
+        resp = client.call(prompt, max_tokens=2000)
+        mapping = json_repair.loads(resp.get("raw_text", "{}"))
+        print(f"Semantic merge mapping: {mapping}")
+    except Exception as e:
+        print(f"Semantic merge failed: {e}")
+        mapping = {}
+
+    # 5. 应用映射
+    for r in results:
+        old_m = r.get('metric')
+        if old_m and old_m in mapping:
+            r['metric'] = mapping[old_m]
+            # 记录原始指标名以便追溯
+            if 'original_metric' not in r:
+                r['original_metric'] = old_m
+    
+    return results
+
+def merge_results(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
     合并多个大模型的提取结果，使用投票制度选择最优值
     
+    支持动态字段识别，不依赖预定义的指标列表
+    
     Args:
-        results: 包含多个模型提取结果的列表，每个结果包含:
-                - company: 公司名称
-                - metric: 指标名称（如营收、营业额等）
-                - value: 提取的数值
-                - unit: 单位
-                - year: 年份
-                - type: 类型
-                - model: 模型名称
-                - page_id, para_id: 位置信息
+        results: 包含多个模型提取结果的列表
                 
     Returns:
-        合并后的结果列表，每个元素代表一个唯一的(company, metric, page_id, para_id)组合的最优结果
-        只保留指定的字段：value, unit, year, type, confidence, page_id, para_id, support, notes
+        合并后的结果列表
     """
     
-    # 按 (company, metric, page_id, para_id) 分组
+    # 0. 语义合并（AI）
+    results = semantic_merge_metrics(results)
+
+    # 按 (company, metric) 分组（不再依赖page_id/para_id，因为同一指标可能出现在多处）
     grouped = defaultdict(list)
     for result in results:
         # 跳过无效记录
@@ -84,27 +175,32 @@ def merge_results(results):
             
         key = (
             result.get('company', 'Unknown'),
-            result.get('metric', ''),
-            result.get('page_id', ''),
-            result.get('para_id', '')
+            result.get('metric', '').strip()
         )
         grouped[key].append(result)
     
     merged_results = []
     
-    for (company, metric, page_id, para_id), group in grouped.items():
+    for (company, metric), group in grouped.items():
         # 对每组进行投票合并
         merged_item = vote_merge_group(group)
         
-        # 只保留指定的字段
+        # 计算百分制置信度
+        confidence_score = calculate_confidence(merged_item)
+        
+        # 构建最终结果
         final_item = {
             'company': company,
             'metric': metric,
             'value': merged_item.get('value', ''),
+            'value_lastyear': merged_item.get('value_lastyear', ''),
+            'value_before2year': merged_item.get('value_before2year', ''),
+            'YoY': merged_item.get('YoY', ''),
+            'YoY_D': merged_item.get('YoY_D', ''),
             'unit': merged_item.get('unit', ''),
             'year': merged_item.get('year', ''),
             'type': merged_item.get('type', ''),
-            'confidence': merged_item.get('confidence', ''),
+            'confidence': confidence_score,  # 百分制
             'page_id': merged_item.get('page_id'),
             'para_id': merged_item.get('para_id'),
             'support': merged_item.get('support', []),
@@ -115,9 +211,11 @@ def merge_results(results):
     return merged_results
 
 
-def vote_merge_group(group):
+def vote_merge_group(group: List[Dict[str, Any]]) -> Dict[str, Any]:
     """
-    对同一组（相同company, metric, page_id, para_id）的结果进行投票合并
+    对同一组（相同company, metric）的结果进行投票合并
+    
+    支持多字段投票：value, value_lastyear, value_before2year, YoY, YoY_D等
     
     Args:
         group: 同一组的所有模型结果
@@ -137,32 +235,51 @@ def vote_merge_group(group):
         result['notes'] = []
         return result
     
-    # 对提取的值进行投票
-    # 创建值的组合键：(value, unit, year, type)
-    value_votes = Counter()
-    value_to_items = defaultdict(list)
+    # 对主要字段分别进行投票
+    field_votes = {
+        'value': Counter(),
+        'value_lastyear': Counter(),
+        'value_before2year': Counter(),
+        'YoY': Counter(),
+        'YoY_D': Counter(),
+        'unit': Counter(),
+        'year': Counter(),
+        'type': Counter(),
+    }
     
+    # 收集每个字段的投票
     for item in group:
-        value_key = (
-            item.get('value', ''),
-            item.get('unit', ''),
-            item.get('year', ''),
-            item.get('type', '')
-        )
-        value_votes[value_key] += 1
-        value_to_items[value_key].append(item)
+        for field in field_votes.keys():
+            val = item.get(field, '').strip()
+            
+            # 对数值字段进行清洗
+            if field in ['value', 'value_lastyear', 'value_before2year', 'YoY', 'YoY_D']:
+                val = clean_numeric_value(val)
+
+            if val:  # 只统计非空值
+                field_votes[field][val] += 1
     
-    # 选择得票最多的值
-    winning_value_key, winning_votes = value_votes.most_common(1)[0]
-    winning_items = value_to_items[winning_value_key]
+    # 选择每个字段的获胜值
+    merged = {}
+    for field, votes in field_votes.items():
+        if votes:
+            merged[field] = votes.most_common(1)[0][0]
+        else:
+            merged[field] = ''
     
-    # 选择获胜值中的一个代表项（选第一个）
-    representative = winning_items[0].copy()
+    # 计算主字段（value）的投票比例作为置信度参考
+    value_votes = field_votes['value']
+    if value_votes:
+        winning_value, winning_count = value_votes.most_common(1)[0]
+        total_votes = sum(value_votes.values())
+        vote_ratio = winning_count / total_votes if total_votes > 0 else 0
+    else:
+        vote_ratio = 0
+        winning_count = 0
     
-    # 计算置信度（基于投票比例）
-    total_votes = len(group)
-    vote_ratio = winning_votes / total_votes
+    total_models = len(group)
     
+    # 根据投票比例确定文本置信度
     if vote_ratio >= 0.8:
         confidence = 'high'
     elif vote_ratio >= 0.5:
@@ -175,20 +292,24 @@ def vote_merge_group(group):
     
     # 创建注释信息
     notes = []
-    notes.append(f"投票结果: {winning_votes}/{total_votes} 模型支持此值")
+    notes.append(f"投票结果: {winning_count}/{total_models} 模型支持此值")
     
     if len(value_votes) > 1:
         # 如果有多个不同的值，记录所有投票结果
         vote_details = []
-        for (value, unit, year, type_), votes in value_votes.most_common():
-            vote_details.append(f"{value} {unit} ({year}, {type_}): {votes}票")
+        for value, votes in value_votes.most_common():
+            vote_details.append(f"{value}: {votes}票")
         notes.append(f"所有投票: {'; '.join(vote_details)}")
     
+    # 选择一个代表性的位置信息（选第一个）
+    merged['page_id'] = group[0].get('page_id')
+    merged['para_id'] = group[0].get('para_id')
+    
     # 更新结果
-    representative.update({
+    merged.update({
         'confidence': confidence,
         'support': support_models,
         'notes': notes
     })
     
-    return representative
+    return merged

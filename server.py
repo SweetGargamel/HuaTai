@@ -28,11 +28,8 @@ def _build_job_payload(job: Dict[str, Any], keywords: Any) -> Dict[str, Any]:
         'success': True,
         'data': {
             'reportId': job['report_id'],
-            'fileName': job['file_name'],
             'status': job['status'],
             'message': job.get('message', ''),
-            'uploadedAt': job.get('created_at'),
-            'updatedAt': job.get('updated_at'),
             'keywords': keywords,
         }
     }
@@ -60,12 +57,11 @@ def create_report():
 
     response = {
         'success': True,
-        'message': '文件上传成功，正在处理中...',
         'data': {
             'reportId': job['report_id'],
-            'fileName': job['file_name'],
             'status': job['status'],
-            'uploadedAt': job['created_at'],
+            'message': '文件上传成功，正在处理中...',
+            'keywords': []
         }
     }
     return jsonify(response), 201

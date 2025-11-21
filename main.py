@@ -84,7 +84,19 @@ def aggregate_merged_for_company(merged_items: List[Dict[str, Any]]) -> Dict[str
     return metric_map
 
 
-def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str], output_dir: str, mock_extractor: bool, max_workers:int):
+def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str], output_dir: str, mock_extractor: bool, max_workers:int, auto_extract: bool = True):
+    """
+    运行提取流程
+    
+    Args:
+        pdf_files: PDF文件列表
+        companies: 公司列表
+        metrics: 指标列表（仅当auto_extract=False时使用）
+        output_dir: 输出目录
+        mock_extractor: 是否使用mock模式
+        max_workers: 并发数
+        auto_extract: 是否使用自动化全指标提取（True=新模式，False=旧模式）
+    """
     ensure_output_dir(output_dir)
 
     all_paragraphs = []
@@ -122,11 +134,29 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
         os.environ['EXTRACTOR_MOCK'] = '0'
 
     for comp, paras in company_paragraphs.items():
-        print(f'Running extraction for company {comp} on {len(paras)} paragraphs...')
-        res = llm_extractor.extract_metrics(paras, metrics, workers=max_workers)
-        # attach company tag
+        # 为段落添加公司标识
+        for p in paras:
+            p['company'] = comp
+        
+        if auto_extract:
+            # 新模式：自动化全指标提取
+            print(f'Running AUTO extraction for company {comp} on {len(paras)} paragraphs...')
+            res = llm_extractor.extract_all_metrics_chunked(
+                paras, 
+                chunk_size=getattr(cfg, 'CHUNK_SIZE', 5),
+                overlap=getattr(cfg, 'CHUNK_OVERLAP', 2),
+                enable_verification=getattr(cfg, 'ENABLE_VERIFICATION', True),
+                workers=max_workers
+            )
+        else:
+            # 旧模式：基于预定义指标列表提取
+            print(f'Running extraction for company {comp} on {len(paras)} paragraphs with {len(metrics)} metrics...')
+            res = llm_extractor.extract_metrics(paras, metrics, workers=max_workers)
+        
+        # attach company tag (如果extractor没有添加的话)
         for r in res:
-            r['company'] = comp
+            if 'company' not in r or not r['company']:
+                r['company'] = comp
         extractor_results.extend(res)
 
     ext_path = cfg.EXTRACTIONS_JSON.format(output_dir=output_dir)
@@ -134,7 +164,7 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
     print(f'Extraction results saved to {ext_path} (rows={len(extractor_results)})')
 
     
-    # 4) Merge per company/metric/paragraph
+    # 4) Merge per company/metric
     merged = results_merger.merge_results(extractor_results)
     merged_path = cfg.MERGED_JSON.format(output_dir=output_dir)
     save_json(merged, merged_path)
@@ -162,6 +192,10 @@ def run_pipeline(pdf_files: List[str], companies: List[str], metrics: List[str],
             bbox = para_bbox_map.get((item.get("page_id"), item.get("para_id")))
             final_map[metric] = {
                 'value': item.get('value',''),
+                'value_lastyear': item.get('value_lastyear', ''),
+                'value_before2year': item.get('value_before2year', ''),
+                'YoY': item.get('YoY', ''),
+                'YoY_D': item.get('YoY_D', ''),
                 'unit': item.get('unit',''),
                 'year': item.get('year',''),
                 'type': item.get('type',''),
@@ -186,6 +220,7 @@ if __name__ == '__main__':
     ap.add_argument('--pdf', nargs='+', help='PDF file(s) to process')
     ap.add_argument('--output_dir', default='./output')
     ap.add_argument('--mock', action='store_true', help='Use mock extractor (no API keys)')
+    ap.add_argument('--legacy', action='store_true', help='Use legacy extraction (predefined metrics only)')
     args = ap.parse_args()
 
     pdfs = load_pdf_list(args.pdf)
@@ -195,4 +230,12 @@ if __name__ == '__main__':
     cfg.MERGED_JSON = cfg.MERGED_JSON
     cfg.FINAL_JSON = cfg.FINAL_JSON
 
-    run_pipeline(pdfs, cfg.COMPANIES, cfg.METRICS, args.output_dir, mock_extractor=(args.mock or cfg.MOCK_EXTRACTOR), max_workers=cfg.MAX_WORKERS)
+    run_pipeline(
+        pdfs, 
+        cfg.COMPANIES, 
+        cfg.METRICS, 
+        args.output_dir, 
+        mock_extractor=(args.mock or cfg.MOCK_EXTRACTOR), 
+        max_workers=cfg.MAX_WORKERS,
+        auto_extract=(not args.legacy)  # 默认使用新的自动提取模式
+    )

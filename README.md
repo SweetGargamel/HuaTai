@@ -119,7 +119,7 @@ curl -X POST http://localhost:8000/api/v1/reports \
 `GET /api/v1/reports/{reportId}`
 
 ```bash
-curl http://localhost:8000/api/v1/reports/uuid-a1b2c3d4-e5f6-7890
+curl http://localhost:8000/api/v1/reports/f9dc1408-5a16-49b0-94f2-f0f57092f3a5
 ```
 
 - **PROCESSING**：`keywords` 返回空数组。

@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "data": {
+    "reportId": "63ab85a0-02a1-4e32-8a3f-6466729e8bc7",
+    "status": "COMPLETED",
+    "message": "解析PDF文档成功",
+    "keywords": {
+      "营收": {
+        "value": "",
+        "value_lastyear": "",
+        "value_before2year": "",
+        "YoY": "",
+        "YoY_D": "",
+        "unit": "",
+        "year": "",
+        "type": "",
+        "confidence": 100,
+        "page_id": 1,
+        "para_id": 1,
+        "bbox": [
+          51.749997843749995,
+          17.339354727526825,
+          348.18162649243163,
+          81.07763334051504
+        ],
+        "company": "招商证券"
+      },
+      "债券面值": {
+        "value": "",
+        "value_lastyear": "",
+        "value_before2year": "",
+        "YoY": "",
+        "YoY_D": "",
+        "unit": "",
+        "year": "",
+        "type": "",
+        "confidence": 100,
+        "page_id": 1,
+        "para_id": 1,
+        "bbox": [
+          51.749997843749995,
+          17.339354727526825,
+          348.18162649243163,
+          81.07763334051504
+        ],
+        "company": "招商证券"
+      },
+      "利率": {
+        "value": "",
+        "value_lastyear": "",
+        "value_before2year": "",
+        "YoY": "",
+        "YoY_D": "",
+        "unit": "",
+        "year": "",
+        "type": "",
+        "confidence": 100,
+        "page_id": 1,
+        "para_id": 1,
+        "bbox": [
+          51.749997843749995,
+          17.339354727526825,
+          348.18162649243163,
+          81.07763334051504
+        ],
+        "company": "招商证券"
+      },
+      "利润": {
+        "value": "",
+        "value_lastyear": "",
+        "value_before2year": "",
+        "YoY": "",
+        "YoY_D": "",
+        "unit": "",
+        "year": "",
+        "type": "",
+        "confidence": 100,
+        "page_id": 1,
+        "para_id": 1,
+        "bbox": [
+          51.749997843749995,
+          17.339354727526825,
+          348.18162649243163,
+          81.07763334051504
+        ],
+        "company": "招商证券"
+      }
+    }
+  }
+}

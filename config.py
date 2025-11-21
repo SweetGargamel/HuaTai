@@ -53,4 +53,12 @@ MOCK_EXTRACTOR = False
 # Other settings
 MAX_WORKERS = 6
 
+# 分段提取配置（新增）
+CHUNK_SIZE = 5  # 每次处理的段落数量
+CHUNK_OVERLAP = 2  # 段落重叠数量，建议为 CHUNK_SIZE 的 30-50%
+ENABLE_VERIFICATION = True  # 是否启用二轮验证（会增加API调用次数）
+
+# 自动提取模式（新增）
+AUTO_EXTRACT_MODE = True  # True=自动提取所有指标，False=仅提取METRICS列表中的指标
+
 

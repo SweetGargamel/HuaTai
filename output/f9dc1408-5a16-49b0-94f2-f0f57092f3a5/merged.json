@@ -1,0 +1,757 @@
+[
+  {
+    "company": "招商证券",
+    "metric": "债券余额",
+    "value": "43",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2022",
+    "type": "actual",
+    "confidence": 57,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "qwen3-max",
+      "qwen3-max"
+    ],
+    "notes": [
+      "投票结果: 1/4 模型支持此值",
+      "所有投票: 43: 1票; 47: 1票; 40: 1票; 20: 1票"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借余额（报告期初）",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "qwen3-max-verify"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借余额（报告期末）",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "qwen3-max-verify"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借占净资产比例",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "",
+    "type": "actual",
+    "confidence": 50,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "有息债务余额（报告期初）",
+    "value": "3399.89",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max",
+      "qwen3-max-verify"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "有息债务余额（报告期末）",
+    "value": "3252.08",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "actual",
+    "confidence": 50,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "有息债务余额同比变动",
+    "value": "",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "-4.35%",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "",
+    "type": "actual",
+    "confidence": 40,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借余额（期初）",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "actual",
+    "confidence": 50,
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "公司信用类债券余额",
+    "value": "1,479.21",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "公司信用类债券-1年以内（含）",
+    "value": "802.09",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "报告期末",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "归属于上市公司股东的扣除非经常性损益的净利润",
+    "value": "103.77",
+    "value_lastyear": "87.32",
+    "value_before2year": "",
+    "YoY": "18.84",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "流动比率",
+    "value": "1.38",
+    "value_lastyear": "1.41",
+    "value_before2year": "",
+    "YoY": "-1.88",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "速动比率",
+    "value": "1.38",
+    "value_lastyear": "1.41",
+    "value_before2year": "",
+    "YoY": "-1.88",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "资产负债率",
+    "value": "77.13",
+    "value_lastyear": "78.89",
+    "value_before2year": "",
+    "YoY": "-1.76",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "EBITDA全部债务比",
+    "value": "5.04",
+    "value_lastyear": "4.59",
+    "value_before2year": "",
+    "YoY": "9.74",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利息保障倍数",
+    "value": "2.34",
+    "value_lastyear": "2.06",
+    "value_before2year": "",
+    "YoY": "13.49",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "现金利息保障倍数",
+    "value": "3.28",
+    "value_lastyear": "2.61",
+    "value_before2year": "",
+    "YoY": "25.88",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "EBITDA利息保障倍数",
+    "value": "2.44",
+    "value_lastyear": "2.15",
+    "value_before2year": "",
+    "YoY": "13.68",
+    "YoY_D": "",
+    "unit": "",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max",
+      "deepseek-v3.2-exp"
+    ],
+    "notes": [
+      "投票结果: 3/3 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "贷款偿还率",
+    "value": "100.00",
+    "value_lastyear": "100.00",
+    "value_before2year": "",
+    "YoY": "-",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "利息偿付率",
+    "value": "100.00",
+    "value_lastyear": "100.00",
+    "value_before2year": "",
+    "YoY": "-",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 100,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "qwen3-max",
+      "qwen3-max"
+    ],
+    "notes": [
+      "投票结果: 2/2 模型支持此值"
+    ]
+  },
+  {
+    "company": "招商证券",
+    "metric": "22招证Y1债券余额",
+    "value": "43",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "22招证Y2债券余额",
+    "value": "47",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "22招证Y3债券余额",
+    "value": "40",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "22招证Y4债券余额",
+    "value": "20",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借余额",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "非经营性往来占款和资金拆借占合并口径净资产的比例",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "有息债务余额",
+    "value": "3,252.08",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "-4.35%",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "2023",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 1,
+    "para_id": 1,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "资产负债率（%）",
+    "value": "77.13",
+    "value_lastyear": "78.89",
+    "value_before2year": "",
+    "YoY": "减少1.76个百分点",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "贷款偿还率（%）",
+    "value": "100.00",
+    "value_lastyear": "100.00",
+    "value_before2year": "",
+    "YoY": "-",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "利息偿付率（%）",
+    "value": "100.00",
+    "value_lastyear": "100.00",
+    "value_before2year": "",
+    "YoY": "-",
+    "YoY_D": "",
+    "unit": "%",
+    "year": "2024",
+    "type": "actual",
+    "confidence": 55,
+    "page_id": 2,
+    "para_id": 13,
+    "support": [
+      "deepseek-v3.2-exp"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "公司信用类债券-2025年4至12月内到期或回售偿付",
+    "value": "505.08",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "境外债券余额",
+    "value": "10.06",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "永续次级债券规模",
+    "value": "150",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 2,
+    "para_id": 10,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "企业债券余额（合并口径）",
+    "value": "0",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "境外债券余额（合并口径）",
+    "value": "10.06",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 2,
+    "para_id": 7,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "永续次级债券规模（母公司口径）",
+    "value": "150",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  },
+  {
+    "company": "招商证券",
+    "metric": "2025年4至12月内到期或回售的公司信用类债券余额",
+    "value": "505.08",
+    "value_lastyear": "",
+    "value_before2year": "",
+    "YoY": "",
+    "YoY_D": "",
+    "unit": "亿元",
+    "year": "",
+    "type": "",
+    "confidence": 50,
+    "page_id": 1,
+    "para_id": 4,
+    "support": [
+      "qwen3-max-verify"
+    ],
+    "notes": []
+  }
+]
