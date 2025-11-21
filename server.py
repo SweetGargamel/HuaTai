@@ -6,12 +6,13 @@ from typing import Dict, Any
 from uuid import uuid4
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
 from jobs import JobStore, ReportProcessor
 
 app = Flask(__name__)
-
+CORS(app)
 UPLOAD_DIR = Path('uploads')
 OUTPUT_DIR = Path('output')
 DB_PATH = OUTPUT_DIR / 'report_jobs.db'
