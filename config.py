@@ -29,6 +29,10 @@ ZHIPU_API_KEY = ""
 SPARK_API_KEY = ""
 SPARK_ENDPOINT = "https://spark-api-open.xf-yun.com/v2/chat/completions"
 
+# 阿里云百炼 API (Qwen 和 DeepSeek 模型)
+DASHSCOPE_API_KEY = "sk-ad8d5e09965d495c8d8a193a7f16d06d"
+DASHSCOPE_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+
 # Where to write intermediate and final outputs
 OUTPUT_DIR = "./output"
 PARSED_JSON = "{output_dir}/parsed.json"

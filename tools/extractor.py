@@ -24,6 +24,12 @@ try:
 except Exception:
     ZhipuAiClient = None
 
+# OpenAI-compatible SDK (for Qwen and DeepSeek)
+try:
+    from openai import OpenAI
+except Exception:
+    OpenAI = None
+
 import config as cfg
 
 # ---------- 配置 ----------
@@ -35,6 +41,8 @@ REQUEST_TIMEOUT = 30
 ZHIPU_API_KEY = cfg.ZHIPU_API_KEY
 SPARK_API_KEY = cfg.SPARK_API_KEY
 SPARK_ENDPOINT = cfg.SPARK_ENDPOINT
+DASHSCOPE_API_KEY = cfg.DASHSCOPE_API_KEY
+DASHSCOPE_BASE_URL = cfg.DASHSCOPE_BASE_URL
 
 _mock_flag = os.getenv("EXTRACTOR_MOCK")
 if _mock_flag is None:
@@ -111,6 +119,47 @@ class SparkClient(BaseClient):
         text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
         return {"raw_text": text, "latency": latency, "ok": True}
 
+
+class QwenClient(BaseClient):
+    def __init__(self, api_key: str, base_url: str):
+        self.name = "qwen3-max"
+        if not OpenAI:
+            raise RuntimeError("openai SDK not installed")
+        self.client = OpenAI(api_key=api_key, base_url=base_url)
+    def call(self, prompt: str, max_tokens: int = 300, temperature: float = DEFAULT_TEMPERATURE) -> Dict[str, Any]:
+        t0 = time.time()
+        resp = self.client.chat.completions.create(
+            model="qwen3-max",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=max_tokens,
+            temperature=temperature,
+            stream=False
+        )
+        latency = time.time() - t0
+        text = resp.choices[0].message.content
+        return {"raw_text": text, "latency": latency, "ok": True}
+
+
+class DeepSeekClient(BaseClient):
+    def __init__(self, api_key: str, base_url: str):
+        self.name = "deepseek-v3.2-exp"
+        if not OpenAI:
+            raise RuntimeError("openai SDK not installed")
+        self.client = OpenAI(api_key=api_key, base_url=base_url)
+    def call(self, prompt: str, max_tokens: int = 300, temperature: float = DEFAULT_TEMPERATURE) -> Dict[str, Any]:
+        t0 = time.time()
+        resp = self.client.chat.completions.create(
+            model="deepseek-v3.2-exp",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=max_tokens,
+            temperature=temperature,
+            extra_body={"enable_thinking": True},
+            stream=False
+        )
+        latency = time.time() - t0
+        text = resp.choices[0].message.content
+        return {"raw_text": text, "latency": latency, "ok": True}
+
 # ---------- 输出解析 ----------
 
 def _try_parse_json(s: str):
@@ -136,12 +185,15 @@ def _normalize(raw: str) -> Dict[str, Any]:
 def extract_metrics(paragraphs: List[Dict[str,Any]], metrics: List[str], workers:int=CONCURRENCY) -> List[Dict[str,Any]]:
     clients: List[BaseClient] = []
     if MOCK_MODE:
-        clients = [MockClient("glm-4-plus"), MockClient("spark-4.0Ultra")]
+        clients = [MockClient("glm-4-plus"), MockClient("spark-4.0Ultra"), MockClient("qwen3-max"), MockClient("deepseek-v3.2-exp")]
     else:
         if ZHIPU_API_KEY:
             clients.append(ZhipuClient(ZHIPU_API_KEY))
         if SPARK_API_KEY:
             clients.append(SparkClient(SPARK_API_KEY))
+        if DASHSCOPE_API_KEY:
+            clients.append(QwenClient(DASHSCOPE_API_KEY, DASHSCOPE_BASE_URL))
+            clients.append(DeepSeekClient(DASHSCOPE_API_KEY, DASHSCOPE_BASE_URL))
         if not clients:
             raise RuntimeError("No LLM extractor configured. Provide API keys in config.py or enable mock mode.")
     results = []
