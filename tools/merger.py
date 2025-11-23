@@ -55,6 +55,7 @@
 from collections import defaultdict, Counter
 from typing import Dict, Any, List, Tuple
 import re
+import json
 import json_repair
 import config as cfg
 
@@ -116,6 +117,8 @@ def semantic_merge_metrics(results: List[Dict[str, Any]]) -> List[Dict[str, Any]
         return results
 
     # 3. 构建提示词
+    # Use json.dumps to serialize the metric list for the prompt.
+    # json_repair may not implement a 'dumps' helper, so avoid calling it here.
     prompt = (
         "请分析以下财务指标名称列表，找出含义相同或包含关系的指标，并将它们合并为标准名称。\n"
         "原则：\n"
@@ -125,7 +128,7 @@ def semantic_merge_metrics(results: List[Dict[str, Any]]) -> List[Dict[str, Any]
         "4. '非合并口径' 与 '合并口径' 如果数值一致或者是默认口径，可以合并为通用名称。\n"
         "5. 返回一个 JSON 映射对象，格式为 {\"原指标名\": \"标准指标名\"}。\n"
         "6. 未提及的指标将保持原样。\n\n"
-        f"指标列表：{json_repair.dumps(metrics, ensure_ascii=False)}\n\n"
+        f"指标列表：{json.dumps(metrics, ensure_ascii=False)}\n\n"
         "仅返回 JSON。"
     )
 

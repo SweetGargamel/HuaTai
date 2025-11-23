@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\CodePlace\HuaTai\jobs.py", line 128, in _process_job
+    final = run_pipeline(
+            ^^^^^^^^^^^^^
+  File "E:\CodePlace\HuaTai\main.py", line 168, in run_pipeline
+    merged = results_merger.merge_results(extractor_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\CodePlace\HuaTai\tools\merger.py", line 167, in merge_results
+    results = semantic_merge_metrics(results)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\CodePlace\HuaTai\tools\merger.py", line 128, in semantic_merge_metrics
+    f"指标列表：{json_repair.dumps(metrics, ensure_ascii=False)}\n\n"
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: module 'json_repair' has no attribute 'dumps'
